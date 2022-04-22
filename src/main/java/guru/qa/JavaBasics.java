@@ -7,7 +7,9 @@ public class JavaBasics {
         compare();
         logic();
         onemorelogic();
-        code();
+        codewithif();
+        minandmax();
+        operations();
     }
 
     static void arithmetic() {
@@ -47,76 +49,41 @@ public class JavaBasics {
     static void onemorelogic() {
 
         String name = "Алина";
-        boolean result = name instanceof String;
+        boolean result = name instanceof String; //instanceof
         System.out.println(result);
     }
 
-    static void code() {
+    static void codewithif() {
 
-        String aString = "Dima";
+        byte aByte = 127;
 
-        if (aString.equals("Dima")) {
-            if (aString.length() == 5) {
-                System.out.println("Hi, " + aString);
-            }
-
-        } else if (aString.equals("Alex")) {
-            System.out.println("Hi, " + aString);
-
+        if (aByte <= 127) {
+            System.out.println("Это байт");
         } else {
-            System.out.println("Dosada");
+            System.out.println("Переполнение в большую сторону");
         }
+    }
+
+    static void minandmax() {
+
+        int aInt = 2147483647;
+        System.out.println("aInt + 2 = " + (aInt + 2));
+
+        int bInt = -2147483648;
+        System.out.println("bInt - 2 = " + (bInt - 2));
+
+    }
+
+    static void operations() {
+
+        short aShort = 10000;
+        int aInt = 10000;
+        System.out.println("aInt + aShort = " + (aInt + aShort));
+
+        float aFloat = 4222.812F;
+        double aDouble = 222.812D;
+        System.out.println("aFloat - aDouble = " + (aFloat - aDouble));
+
     }
 }
 
-
-
-
-
-
-
-
-//            if (aString.equals("Dima")) {
-//                if (aString.length() == 5) {
-//                    System.out.println("Hi, " + aString);
-//                }
-//            } else if (aString.equals("Alex")) {
-//                System.out.println("Hi, " + aString);
-//            } else {
-//                System.out.println("Dosada");
-//            }
-//
-//            switch (aString) {
-//                case "Dima":
-//                    System.out.println("Hi, " + aString);
-//                    break;
-//                case "Alex":
-//                    System.out.println("Hi, " + aString);
-//                    break;
-//            }
-//
-//            aString = 3 > 2
-//                    ? "Dima"
-//                    : "Alex";
-//
-//            if (3 > 2) {
-//                aString = "Dima";
-//            } else {
-//                aString = "Alex";
-//            }
-//
-//
-//            getMaxIntNumber();
-//            System.out.println(summ(aByte, (int) aLong));
-//        }
-//
-//
-//        static void getMaxIntNumber() {
-//            System.out.println("max value: " + Integer.MAX_VALUE);
-//        }
-//
-//        static int summ(int first, int second) {
-//            return first + second;
-//        }
-//    }
-//
